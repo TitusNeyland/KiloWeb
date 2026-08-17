@@ -13,25 +13,25 @@ document.querySelectorAll(".faq-item").forEach((item) => {
   });
 });
 
-// Billing toggle
-const toggleOptions = document.querySelectorAll(".bt-option");
-const priceAmount = document.querySelector(".price-card.featured .price-amount");
-const pricePeriod = document.querySelector(".price-card.featured .price-period");
-toggleOptions.forEach((opt) => {
-  opt.addEventListener("click", () => {
-    toggleOptions.forEach((o) => o.classList.remove("active"));
-    opt.classList.add("active");
-    const period = opt.dataset.period;
-    if (!priceAmount || !pricePeriod) return;
-    if (period === "annual") {
-      priceAmount.textContent = priceAmount.dataset.annual;
-      pricePeriod.textContent = pricePeriod.dataset.annualLabel;
-    } else {
-      priceAmount.textContent = priceAmount.dataset.monthly;
-      pricePeriod.textContent = pricePeriod.dataset.monthlyLabel;
-    }
-  });
-});
+// Billing toggle for Kilo Plus — hidden until Plus launches
+// const toggleOptions = document.querySelectorAll(".bt-option");
+// const priceAmount = document.querySelector(".price-card.featured .price-amount");
+// const pricePeriod = document.querySelector(".price-card.featured .price-period");
+// toggleOptions.forEach((opt) => {
+//   opt.addEventListener("click", () => {
+//     toggleOptions.forEach((o) => o.classList.remove("active"));
+//     opt.classList.add("active");
+//     const period = opt.dataset.period;
+//     if (!priceAmount || !pricePeriod) return;
+//     if (period === "annual") {
+//       priceAmount.textContent = priceAmount.dataset.annual;
+//       pricePeriod.textContent = pricePeriod.dataset.annualLabel;
+//     } else {
+//       priceAmount.textContent = priceAmount.dataset.monthly;
+//       pricePeriod.textContent = pricePeriod.dataset.monthlyLabel;
+//     }
+//   });
+// });
 
 // Simple QR code pattern (decorative — real QR generated server-side for production)
 const qr = document.getElementById("qr");
