@@ -416,11 +416,11 @@ h2 .italic { color: var(--purple-600); }
   border-bottom-left-radius: 4px;
 }
 .chat-msg.you {
-  background: var(--purple-500);
+  background: #007aff;
   color: var(--white);
   margin-left: auto;
   border-bottom-right-radius: 4px;
-  box-shadow: 0 2px 6px rgba(124, 92, 232, 0.25);
+  box-shadow: 0 2px 6px rgba(0, 122, 255, 0.25);
 }
 .chat-msg .sender {
   font-size: 11px; font-weight: 700;
@@ -459,7 +459,7 @@ h2 .italic { color: var(--purple-600); }
 .chat-msg.you::before {
   right: -7px;
   width: 18px;
-  background: var(--purple-500);
+  background: #007aff;
   border-bottom-left-radius: 18px 14px;
 }
 .chat-msg.you::after {
