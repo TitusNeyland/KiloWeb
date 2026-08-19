@@ -374,7 +374,9 @@ if (helpSearch) {
   btn.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
-      behavior: prefersReducedMotion ? "auto" : "smooth",
+      // Instant on phones: iOS smooth-scroll to top often fails to paint the
+      // hero and flashes the page background for a frame.
+      behavior: prefersReducedMotion || isSmallScreen || isTouchDevice ? "auto" : "smooth",
     });
   });
 })();

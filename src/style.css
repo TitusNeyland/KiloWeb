@@ -18,8 +18,13 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
   max-width: 100%;
+  /* Matches the hero so iOS overscroll / jump-to-top never flashes cream. */
+  background: var(--purple-900);
+}
+@media (max-width: 768px), (hover: none) and (pointer: coarse) {
+  /* iOS status-bar tap + CSS smooth-scroll leaves the hero unpainted for a beat. */
+  html { scroll-behavior: auto; }
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
