@@ -1664,6 +1664,7 @@ footer {
   .features-grid { grid-template-columns: 1fr; }
   .feature-card.large { grid-row: auto; min-height: auto; }
   .creators { grid-template-columns: 1fr; gap: 40px; padding: 80px 20px; }
+  .creators .fd-visual { height: 420px; }
   .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
   .features-inner { padding: 0 20px; }
   .phone { transform: scale(0.85); }

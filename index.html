@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Kilo splits your subscriptions automatically. Set it once, get paid every month — no Venmo requests, no awkward texts."
+      content="Kilo splits your subscriptions automatically. Set it once, get paid every month. No Venmo requests, no awkward texts."
     />
     <meta name="theme-color" content="#1a0b2e" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Kilo — Split subscriptions with your friends" />
+    <meta property="og:title" content="Kilo | Split subscriptions with your friends" />
     <meta property="og:description" content="Stop chasing friends for Netflix money. Kilo auto-splits and auto-collects, every month." />
     <meta property="og:type" content="website" />
 
     <!-- Smart App Banner (iOS) -->
     <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID" />
 
-    <title>Kilo. — Split subscriptions with your friends</title>
+    <title>Kilo. Split subscriptions with your friends</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +50,7 @@
           for <span class="italic">Subscription</span> money.
         </h1>
         <p class="hero-sub">
-          Kilo splits your subscriptions automatically. Set it once — get paid every month. No Venmo requests. No awkward texts.
+          Kilo splits your subscriptions automatically. Set it once, get paid every month. No Venmo requests. No awkward texts.
         </p>
         <div class="hero-cta">
           <a href="#download" class="store-btn">
@@ -64,7 +64,7 @@
         </div>
         <div class="micro-trust">
           <span>✓ Free to start</span>
-          <span>✓ No credit card</span>
+          <span>✓ Card or bank via Stripe</span>
           <span>✓ iOS &amp; Android</span>
         </div>
         <div class="trust-row">
@@ -178,32 +178,103 @@
         <div class="step">
           <div class="step-num">01</div>
           <h3>Add the subscription</h3>
-          <p>Netflix, Spotify, Disney+, YouTube Premium — pick from the catalog or add your own service.</p>
-          <div class="step-visual">
-            <div class="step-visual-icon" data-service="Netflix Premium" style="background: #e50914; color: white;">N</div>
-            <div style="font-size: 13px; color: var(--purple-900); font-weight: 500;">Netflix Premium · $26.99</div>
+          <p>Netflix, Spotify, Disney+, YouTube Premium. Pick from the catalog or add your own service.</p>
+          <div class="step-card-wrap purple">
+            <div class="step-card">
+              <div class="step-card-row">
+                <div class="step-card-icon" style="background: #e50914;">N</div>
+                <div class="step-card-detail">
+                  <div class="step-card-name">Netflix Premium</div>
+                  <div class="step-card-meta">$26.99/mo · 4 members</div>
+                </div>
+                <div class="step-card-check" style="color: var(--green);">✓</div>
+              </div>
+              <div class="step-card-row">
+                <div class="step-card-icon" style="background: #1db954;">S</div>
+                <div class="step-card-detail">
+                  <div class="step-card-name">Spotify Family</div>
+                  <div class="step-card-meta">$16.99/mo · 5 members</div>
+                </div>
+              </div>
+              <div class="step-card-row" style="border-bottom: none;">
+                <div class="step-card-icon" style="background: #7c5ce8;">+</div>
+                <div class="step-card-detail">
+                  <div class="step-card-name" style="color: #9ca3af;">Add custom subscription</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="step">
           <div class="step-num">02</div>
           <h3>Invite your friends</h3>
           <p>Send an invite link. They join, add a card, and the split is locked in. Everybody sees who paid what.</p>
-          <div class="step-visual">
-            <div class="step-avatars">
-              <div class="step-visual-icon" style="background: #7c5ce8; color: white; margin-right: -12px; border: 2px solid white;">D</div>
-              <div class="step-visual-icon" style="background: #10b981; color: white; margin-right: -12px; border: 2px solid white;">T</div>
-              <div class="step-visual-icon" style="background: #fb923c; color: white; border: 2px solid white;">J</div>
+          <div class="step-card-wrap green">
+            <div class="step-card">
+              <div style="font-size: 12px; color: #6b7280; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 14px;">Netflix Premium · Split</div>
+              <div class="step-invite-row">
+                <div class="step-invite-avatar" style="background: #7c5ce8;">D</div>
+                <div class="step-invite-info">
+                  <div class="step-invite-name">You (Danny)</div>
+                  <div class="step-invite-role">Owner</div>
+                </div>
+                <div class="step-invite-status owner">Owner</div>
+              </div>
+              <div class="step-invite-row">
+                <div class="step-invite-avatar" style="background: #10b981;">T</div>
+                <div class="step-invite-info">
+                  <div class="step-invite-name">Titus</div>
+                  <div class="step-invite-role">Joined 2 days ago</div>
+                </div>
+                <div class="step-invite-status joined">Joined</div>
+              </div>
+              <div class="step-invite-row">
+                <div class="step-invite-avatar" style="background: #fb923c;">J</div>
+                <div class="step-invite-info">
+                  <div class="step-invite-name">Jordan</div>
+                  <div class="step-invite-role">Joined just now</div>
+                </div>
+                <div class="step-invite-status joined">Joined</div>
+              </div>
+              <div class="step-invite-row" style="border-bottom: none;">
+                <div class="step-invite-avatar" style="background: #e5e7eb; color: #9ca3af;">+</div>
+                <div class="step-invite-info">
+                  <div class="step-invite-name" style="color: #9ca3af;">Invite another friend</div>
+                </div>
+              </div>
             </div>
-            <div style="font-size: 13px; color: var(--purple-900); font-weight: 500;">3 members · equal split</div>
           </div>
         </div>
         <div class="step">
           <div class="step-num">03</div>
           <h3>Get paid, on autopilot</h3>
           <p>Every billing cycle, everyone's card is charged automatically. The money hits your account. Done.</p>
-          <div class="step-visual">
-            <div class="step-visual-icon" style="background: var(--green); color: white;">✓</div>
-            <div style="font-size: 13px; color: var(--purple-900); font-weight: 500;">Auto-charge · every 1st</div>
+          <div class="step-card-wrap amber">
+            <div class="step-card">
+              <div style="text-align: center; padding: 8px 0 16px;">
+                <div style="font-size: 11px; color: #6b7280; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">Collected</div>
+                <div style="font-size: 32px; font-weight: 700; color: var(--green); letter-spacing: -0.02em;">+$20.24</div>
+                <div style="font-size: 12px; color: #9ca3af; margin-top: 4px;">from 3 members · May 1</div>
+              </div>
+              <div style="border-top: 1px solid #f0f0f0; padding-top: 12px; display: flex; flex-direction: column; gap: 8px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--green);"></div>
+                  <span style="font-size: 12px; color: var(--purple-900); flex: 1;">Titus</span>
+                  <span style="font-size: 12px; font-weight: 600; color: var(--green);">$6.74</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--green);"></div>
+                  <span style="font-size: 12px; color: var(--purple-900); flex: 1;">Jordan</span>
+                  <span style="font-size: 12px; font-weight: 600; color: var(--green);">$6.74</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--green);"></div>
+                  <span style="font-size: 12px; color: var(--purple-900); flex: 1;">Mia</span>
+                  <span style="font-size: 12px; font-weight: 600; color: var(--green);">$6.74</span>
+                </div>
+              </div>
+              <div style="margin-top: 14px; text-align: center; background: #ecfdf5; border-radius: 8px; padding: 8px; font-size: 11px; font-weight: 600; color: #059669;">All members paid · deposited to your account</div>
+            </div>
           </div>
         </div>
       </div>
@@ -220,7 +291,7 @@
         <div class="fd-text reveal reveal-left">
           <h3>Every subscription,<br/>in one place.</h3>
           <p>
-            Netflix, Spotify, Game Pass, iCloud, Discord Nitro — your whole recurring life, organized. See exactly who pays for what, when it bills, and what your actual share is.
+            Netflix, Spotify, Disney+, YouTube Premium, ChatGPT. Your whole recurring life, organized. See exactly who pays for what, when it bills, and what your actual share is.
           </p>
           <ul>
             <li>Pre-loaded catalog of 200+ services</li>
@@ -263,7 +334,7 @@
         <div class="fd-text reveal reveal-right">
           <h3>Auto-charge.<br/>Set it, forget it.</h3>
           <p>
-            On billing day, everyone's card gets charged automatically — Kilo collects the cash and deposits it into your account before you even remember the bill is due.
+            On billing day, everyone's card gets charged automatically. Kilo collects the cash and deposits it into your account before you even remember the bill is due.
           </p>
           <ul>
             <li>Secure payments powered by Stripe</li>
@@ -295,7 +366,7 @@
         <div class="fd-text reveal reveal-left">
           <h3>Your savings,<br/>visualized.</h3>
           <p>
-            See how much you're saving every month — and every year — just by splitting. Those dollars add up fast when you're the only one on a family plan.
+            See how much you're saving every month and every year just by splitting. Those dollars add up fast when you're the only one on a family plan.
           </p>
           <ul>
             <li>Real-time savings tracker</li>
@@ -381,7 +452,7 @@
       <div class="section-label reveal" style="justify-content: center;">Pricing</div>
       <h2 class="reveal">Free to start.<br/>Free to <span class="italic">keep</span>.</h2>
       <p class="pricing-sub reveal">
-        Start free with up to 5 active splits. No credit card required.
+        Unlimited splits. Connect a card or bank through Stripe to pay and get paid.
       </p>
 
       <!-- Kilo Plus billing toggle — hidden until Plus launches
@@ -396,10 +467,10 @@
           <div class="price-name">Free</div>
           <div class="price-desc">Everything you need to get started.</div>
           <div class="price-amount">$0</div>
-          <div class="price-period">forever, no card required</div>
+          <div class="price-period">forever free · Stripe for payments</div>
           <a href="#download" class="price-cta primary">Get Kilo free</a>
           <ul class="price-features">
-            <li>Up to 5 active splits</li>
+            <li>Unlimited active splits</li>
             <li>Auto-charge on billing day</li>
             <li>Billing calendar</li>
             <li>Friend balances</li>
@@ -438,63 +509,93 @@
 
       <div class="trust-grid reveal-stagger">
         <div class="trust-item">
-          <div class="trust-icon">🔒</div>
+          <div class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 448 512" width="22" height="22" fill="currentColor"><path d="M144 144c0-44.2 35.8-80 80-80s80 35.8 80 80v48H144V144zm-64 48H64c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64H368V144C368 64.5 303.5 0 224 0S80 64.5 80 144v48z"/></svg>
+          </div>
           <h3>Bank-level encryption</h3>
           <p>End-to-end encrypted payments. We never see or store your card details.</p>
         </div>
         <div class="trust-item">
-          <div class="trust-icon">💳</div>
+          <div class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 576 512" width="22" height="22" fill="currentColor"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM48 96c0-8.8 7.2-16 16-16H512c8.8 0 16 7.2 16 16v32H48V96zM48 160H528V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V160zm72 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"/></svg>
+          </div>
           <h3>Powered by Stripe</h3>
           <p>The same payment infrastructure that powers Amazon, Shopify, and Lyft.</p>
         </div>
         <div class="trust-item">
-          <div class="trust-icon">🛡️</div>
+          <div class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 512 512" width="22" height="22" fill="currentColor"><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394.4 370 431.3 221.4 431.9 141.5L256 66.8z"/></svg>
+          </div>
           <h3>Your data is yours</h3>
           <p>We never sell your data. Ever. Delete your account anytime and it's gone for good.</p>
         </div>
       </div>
     </section>
 
-    <!-- CREATORS / SQUADS -->
+    <!-- ACTIVITY FEED -->
     <section class="creators">
       <div class="reveal reveal-left">
         <div class="section-label">For everyone</div>
         <h2>Split with<br />your <span class="italic">friends</span>.</h2>
         <p style="font-size: 18px; color: #4a3968; line-height: 1.6; max-width: 480px; margin-bottom: 32px;">
-          Game Pass. Discord Nitro. Spotify Family. YouTube Premium. The stuff you and your people use every day — now fairly split, automatically collected.
+          Payments come in on autopilot. You see every charge, every collection, every new member, all in real time.
         </p>
         <a href="#download" class="store-btn" style="background: var(--purple-900); color: var(--cream); display: inline-flex;">
           Start your first split
           <span style="margin-left: 4px;">→</span>
         </a>
       </div>
-      <div class="creators-visual reveal reveal-right">
-        <div class="squad-label">YOUR FRIENDS · 4 MEMBERS</div>
-        <div class="squad-title">The<br />Gamer House</div>
-        <div class="squad-list">
-          <div class="squad-item">
-            <div class="squad-avatar" data-service="Xbox Game Pass" style="background: #52b043; color: white;">G</div>
-            <div class="squad-info">
-              <div class="squad-name">Xbox Game Pass</div>
-              <div class="squad-service">Bills May 14 · 4 way</div>
+      <div class="fd-visual purple reveal reveal-right" style="height: 500px; flex: 1; min-width: 0;">
+        <div class="fd-card" style="width: 320px; padding: 24px;">
+          <div class="fd-card-title">Activity</div>
+
+          <div class="activity-item">
+            <div class="activity-dot" style="background: var(--green);"></div>
+            <div class="activity-body">
+              <div class="activity-text"><strong>Jordan</strong> paid <strong>$6.74</strong></div>
+              <div class="activity-meta">Netflix Premium · just now</div>
             </div>
-            <div class="squad-price">$4.25</div>
+            <div class="activity-badge paid">Paid</div>
           </div>
-          <div class="squad-item">
-            <div class="squad-avatar" data-service="Discord Nitro" style="background: #5865f2; color: white;">D</div>
-            <div class="squad-info">
-              <div class="squad-name">Discord Nitro</div>
-              <div class="squad-service">Bills May 20 · 4 way</div>
+
+          <div class="activity-item">
+            <div class="activity-dot" style="background: var(--green);"></div>
+            <div class="activity-body">
+              <div class="activity-text"><strong>Titus</strong> paid <strong>$3.40</strong></div>
+              <div class="activity-meta">Spotify Family · 2 min ago</div>
             </div>
-            <div class="squad-price">$2.50</div>
+            <div class="activity-badge paid">Paid</div>
           </div>
-          <div class="squad-item">
-            <div class="squad-avatar" data-service="Spotify Family" style="background: #1db954; color: white;">S</div>
-            <div class="squad-info">
-              <div class="squad-name">Spotify Family</div>
-              <div class="squad-service">Bills May 28 · 4 way</div>
+
+          <div class="activity-item">
+            <div class="activity-dot" style="background: #7c5ce8;"></div>
+            <div class="activity-body">
+              <div class="activity-text"><strong>Sam</strong> joined your split</div>
+              <div class="activity-meta">Disney+ · 18 min ago</div>
             </div>
-            <div class="squad-price">$4.24</div>
+            <div class="activity-badge joined">Joined</div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-dot" style="background: var(--green);"></div>
+            <div class="activity-body">
+              <div class="activity-text"><strong>Mia</strong> paid <strong>$4.25</strong></div>
+              <div class="activity-meta">ChatGPT Plus · 1 hr ago</div>
+            </div>
+            <div class="activity-badge paid">Paid</div>
+          </div>
+
+          <div class="activity-item" style="border-bottom: none;">
+            <div class="activity-dot" style="background: #f59e0b;"></div>
+            <div class="activity-body">
+              <div class="activity-text">You created a new split</div>
+              <div class="activity-meta">YouTube Premium · 3 hr ago</div>
+            </div>
+            <div class="activity-badge new">New</div>
+          </div>
+
+          <div style="text-align: center; padding-top: 12px; border-top: 1px solid #f0f0f0;">
+            <div style="font-size: 11px; color: #9ca3af;">5 updates today</div>
           </div>
         </div>
       </div>
@@ -511,14 +612,14 @@
             <span>Is Kilo free?</span>
             <span class="plus">+</span>
           </button>
-          <div class="faq-a">Yes — Kilo is free for up to 5 active splits, forever. No credit card required to get started.</div>
+          <div class="faq-a">Yes, Kilo is completely free with unlimited splits. To send payments or receive payouts, you'll connect a card or link a bank account through Stripe or Link.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
             <span>Is my money safe?</span>
             <span class="plus">+</span>
           </button>
-          <div class="faq-a">Kilo uses Stripe to process all payments — the same infrastructure powering Amazon, Shopify, and millions of businesses. We never see or store your card number.</div>
+          <div class="faq-a">Kilo uses Stripe to process all payments, the same infrastructure powering Amazon, Shopify, and millions of businesses. We never see or store your card number.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
@@ -532,21 +633,21 @@
             <span>Does Kilo actually pay the subscription for me?</span>
             <span class="plus">+</span>
           </button>
-          <div class="faq-a">No — you still pay Netflix (or whoever) directly. Kilo just collects everyone's share and sends it to you, so you break even instead of covering the full bill yourself.</div>
+          <div class="faq-a">No, you still pay Netflix (or whoever) directly. Kilo just collects everyone's share and sends it to you, so you break even instead of covering the full bill yourself.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
             <span>Can I split things other than streaming services?</span>
             <span class="plus">+</span>
           </button>
-          <div class="faq-a">Yes. Any recurring subscription — gym memberships, software, cloud storage, gaming services. If it bills on a schedule, Kilo can split it.</div>
+          <div class="faq-a">Yes. Any recurring subscription: gym memberships, software, cloud storage, gaming services. If it bills on a schedule, Kilo can split it.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            <span>iOS only or Android too?</span>
+            <span>Does Kilo work on iPhone and Android?</span>
             <span class="plus">+</span>
           </button>
-          <div class="faq-a">Both! Kilo works on iOS 15+ and Android 10+. Download on either platform and your splits sync automatically.</div>
+          <div class="faq-a">Yes. Kilo is available on iOS 15+ and Android 10+. Download on either, and your splits sync automatically.</div>
         </div>
         <!-- Kilo Plus FAQ — hidden until Plus launches
         <div class="faq-item">
@@ -563,8 +664,8 @@
     <!-- FINAL CTA WITH QR + SMS -->
     <section class="final-cta" id="download" style="max-width: none; margin: 0;">
       <div class="final-cta-inner">
-        <h2 class="reveal">Splits,<br />made <span class="italic">simple</span>.</h2>
-        <p class="reveal">Download Kilo. Add a subscription. Invite your people. That's it.</p>
+        <h2 class="reveal">Sharing is <span class="italic">better</span>.</h2>
+        <p class="reveal">Download Kilo. Add a subscription. Invite your people. Start saving money!</p>
 
         <div class="hero-cta reveal" style="justify-content: center;">
           <a href="#" class="store-btn">
@@ -601,7 +702,7 @@
       <div class="footer-inner reveal-stagger">
         <div class="footer-brand">
           <a class="logo" href="#top" style="color: white;">Kilo</a>
-          <div class="footer-tagline">Splits, simplified.<br />For the way you live now.</div>
+          <div class="footer-tagline">Sharing is better.<br />For the way you live now.</div>
           <div class="footer-socials">
             <a href="#" aria-label="Instagram">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
