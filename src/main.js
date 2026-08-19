@@ -122,6 +122,9 @@ if (!prefersReducedMotion && "IntersectionObserver" in window) {
         // on phones because the viewport is short and hero+problem reveal
         // nearly simultaneously on first load).
         requestAnimationFrame(() => {
+          // Promote to GPU layer only at the moment of animation,
+          // not upfront for every element (saves mobile VRAM).
+          if (!isSmallScreen) el.style.willChange = "opacity, transform";
           el.classList.add("in-view");
           clearWillChange(el);
         });
