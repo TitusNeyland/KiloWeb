@@ -294,15 +294,16 @@
           <div class="section-label">Section 6</div>
           <h2>Payments &amp; billing.</h2>
           <div class="legal-short">
-            <strong>In short:</strong> Adding a payment method and joining a Split authorizes recurring charges for your share. Fees are disclosed at checkout. Keep a valid card on file.
+            <strong>In short:</strong> Adding a payment method and joining a Split authorizes charges for your share when you pay or enroll in autopay. Fees are disclosed in the quote before you confirm. Keep a valid payment method on file.
           </div>
 
           <h3 id="authorization">6.1 Payment authorization</h3>
           <p>
             <strong>By joining a Split and providing a payment method, you
-            authorize recurring charges to be initiated through Stripe for
-            your share of that Split, and for any applicable Kilo fees,
-            taxes, and third-party fees.</strong>
+            authorize charges through Stripe for your share when you pay
+            manually or when you enroll in autopay, plus any applicable Kilo
+            platform fees, late fees, taxes, and third-party fees disclosed
+            at checkout.</strong>
           </p>
           <p>
             For Split payments between Members, Kilo's role is limited to
@@ -314,7 +315,7 @@
           <p>Specifically, you authorize charges:</p>
           <ul class="legal-list">
             <li><strong>Amount:</strong> your share of each Split, which may vary between billing cycles (for example, if the underlying service changes its price, or if Members join or leave).</li>
-            <li><strong>Frequency:</strong> on the cadence you agreed to when you joined the Split (typically monthly or annually).</li>
+            <li><strong>Frequency:</strong> on the cadence you agreed to when you joined the Split (typically monthly or annually). If you enroll in autopay, off-session charges may run on billing day; otherwise you pay manually.</li>
             <li><strong>Duration:</strong> until you leave the Split or close your account.</li>
             <li><strong>How to cancel:</strong> leave the Split from inside the app, or email <a href="mailto:support@getkilo.app">support@getkilo.app</a>. Cancellation takes effect at the end of the current billing cycle.</li>
           </ul>
@@ -338,7 +339,7 @@
             <!-- Kilo Plus fees — hidden until Plus launches
             <li><strong>Kilo Plus subscription fee</strong> — as displayed at sign-up (see §7).</li>
             -->
-            <li><strong>Payment processing</strong> is performed by Stripe and the standard processing fees are included in the Member share Kilo displays. No separate surcharge is added at checkout.</li>
+            <li><strong>Platform processing fee</strong> — Kilo's fee on member share payments, disclosed in the in-app quote before you confirm. Kilo Plus subscribers receive a reduced fee. A late fee may apply for missed billing cycles.</li>
             <li><strong>Failed-payment retry fee</strong> — none. We do not charge a fee for retrying a declined card. Your bank may charge NSF fees; those are between you and your bank.</li>
             <!-- Kilo Plus tax / store fees — hidden until Plus launches
             <li><strong>Taxes</strong> — Kilo may collect and remit applicable sales tax, VAT, GST, or other taxes on the Kilo Plus subscription fee, where required. You are responsible for any taxes owed by you on transactions between Members.</li>
@@ -349,10 +350,10 @@
 
           <h3>6.4 Failed payments</h3>
           <ul class="legal-list">
-            <li>We will automatically retry declined charges up to [3] times over [7] days.</li>
+            <li>For autopay members, we retry declined off-session charges up to 3 times with approximately 24 hours between attempts. After repeated failures and a grace period, the member is marked overdue and autopay may pause.</li>
+            <li>For manual payers, unpaid shares are marked overdue the day after the billing day.</li>
             <li>You are responsible for keeping a valid payment method on file.</li>
-            <li>After repeated failures we may remove you from the Split, and the Owner will be notified.</li>
-            <li>If you owe amounts because of a failed payment, those amounts remain due, and we may restrict your account, pause affected Splits, or initiate additional collection attempts through Stripe or other lawful means permitted by these Terms and applicable processor rules.</li>
+            <li>Outstanding balances remain due. We may restrict your account or pause autopay on affected Splits.</li>
           </ul>
 
           <h3>6.5 Refunds &amp; chargebacks</h3>
