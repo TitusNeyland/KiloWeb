@@ -94,7 +94,7 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
 const isTouchDevice = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
 const isSmallScreen = window.matchMedia("(max-width: 768px)").matches;
 
-if (!prefersReducedMotion && "IntersectionObserver" in window) {
+if (!prefersReducedMotion && !isSmallScreen && "IntersectionObserver" in window) {
   const revealTargets = document.querySelectorAll(".reveal, .reveal-stagger");
 
   // Release GPU layers (`will-change`) after the animation settles.
