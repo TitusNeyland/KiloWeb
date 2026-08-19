@@ -2222,6 +2222,19 @@ footer { background: var(--black); padding: 60px 40px 40px; color: var(--purple-
     width: 260px;
     height: 540px;
     border-radius: 40px;
+    animation: none;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 12px 28px rgba(0,0,0,0.28);
+  }
+  .hero::before,
+  .hero::after,
+  .final-cta::before { display: none; }
+  .hero-badge .dot { animation: none; }
+  .squad-item { backdrop-filter: none; }
+
+  .problem, .how, .feature-deep, .pricing,
+  .trust-section, .creators, .faq, .final-cta, footer {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 600px;
   }
 
   h2 { font-size: 30px; margin-bottom: 16px; }

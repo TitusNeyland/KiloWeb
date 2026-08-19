@@ -62,20 +62,28 @@ if (qr) {
 // Nav color detection
 const nav = document.getElementById("mainNav");
 if (nav) {
-  const darkSections = [".hero", ".trust-section", ".final-cta", ".legal-hero", ".help-hero", ".help-contact"];
-  const lightSections = [".social-proof", ".problem", ".how", ".feature-deep", ".pricing", ".creators", ".faq", ".legal-shell", ".help-shell"];
+  const darkSelectors = [".hero", ".trust-section", ".final-cta", ".legal-hero", ".help-hero", ".help-contact"];
+  const lightSelectors = [".social-proof", ".problem", ".how", ".feature-deep", ".pricing", ".creators", ".faq", ".legal-shell", ".help-shell"];
+  const darkEls = darkSelectors.map((s) => document.querySelector(s)).filter(Boolean);
+  const lightEls = lightSelectors.map((s) => document.querySelector(s)).filter(Boolean);
 
   function updateNavColor() {
     const checkY = 60;
-    const allSections = [...darkSections, ...lightSections];
     let currentMode = "on-dark";
 
-    for (const selector of allSections) {
-      const el = document.querySelector(selector);
-      if (!el) continue;
+    for (const el of darkEls) {
       const rect = el.getBoundingClientRect();
       if (rect.top <= checkY && rect.bottom > checkY) {
-        currentMode = darkSections.includes(selector) ? "on-dark" : "on-light";
+        currentMode = "on-dark";
+        nav.classList.remove("on-dark", "on-light");
+        nav.classList.add(currentMode);
+        return;
+      }
+    }
+    for (const el of lightEls) {
+      const rect = el.getBoundingClientRect();
+      if (rect.top <= checkY && rect.bottom > checkY) {
+        currentMode = "on-light";
         break;
       }
     }
@@ -84,8 +92,18 @@ if (nav) {
     nav.classList.add(currentMode);
   }
 
-  window.addEventListener("scroll", updateNavColor, { passive: true });
-  window.addEventListener("resize", updateNavColor);
+  let navTicking = false;
+  const onNavScroll = () => {
+    if (navTicking) return;
+    navTicking = true;
+    requestAnimationFrame(() => {
+      navTicking = false;
+      updateNavColor();
+    });
+  };
+
+  window.addEventListener("scroll", onNavScroll, { passive: true });
+  window.addEventListener("resize", onNavScroll, { passive: true });
   updateNavColor();
 }
 
