@@ -36,9 +36,9 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Project page: site is https://<user>.github.io/<repo>/
-          # If your repo is <user>.github.io (user/organization site at domain root), set to / instead — see below.
-          BASE_PATH: /${{ github.event.repository.name }}/
+          # Served from the custom domain root (https://kilosplit.com/).
+          # Without a custom domain this would be /${{ github.event.repository.name }}/
+          BASE_PATH: /
 
       - name: Upload
         uses: actions/upload-pages-artifact@v3
